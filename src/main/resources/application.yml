@@ -1,0 +1,7 @@
+keycloakParam:
+  realm: master
+  server-url: http://localhost:8181/auth
+  username: admin
+  password: admin
+  client-id: admin-cli
+  grant-type: password
