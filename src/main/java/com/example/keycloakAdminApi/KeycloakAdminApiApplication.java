@@ -21,6 +21,16 @@ public class KeycloakAdminApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
+		//log.error("",userService.createClient("apikeyclient").getSecret());
+		/*userService.getClient("apikeyclient").getProtocolMappers().forEach(it->
+				{
+					log.error("name: {}",it.getName());
+					log.error("protocol mapper: {}",it.getProtocolMapper());
+					log.error("config : {}", it.getConfig());
+					log.error("protocol: {}",it.getProtocol());
+				}
+		);*/
+log.info("access : {}",userService.getClient("apikeyclient").getAuthenticationFlowBindingOverrides());
 		userService.getUsers().ifPresent(users->users.forEach(it->log.info("{}",it.getUsername())));
 	}
 }

@@ -1,6 +1,6 @@
 keycloakParam:
   realm: master
-  server-url: http://localhost:8181/auth
+  server-url: http://localhost:8180/auth
   username: admin
   password: admin
   client-id: admin-cli
